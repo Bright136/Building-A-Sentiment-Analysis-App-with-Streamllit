@@ -1,4 +1,4 @@
-# Buildimg A Sentiment Analysis App with Streamlit
+# Building A Sentiment Analysis App with Streamlit
 This is a streamlit app that performs sentiment analysis on COVID-19 tweets using two pre-trained language models, DistilBERT and RoBERTa.
 
 ## Summary
