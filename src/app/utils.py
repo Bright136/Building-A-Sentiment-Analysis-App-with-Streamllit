@@ -4,12 +4,6 @@ from transformers import AutoTokenizer, AutoConfig,AutoModelForSequenceClassific
 from scipy.special import softmax
 import os
 
-# Requirements
-# model_path = "bright1/fine-tuned-distilbert-base-uncased"
-# tokenizer = AutoTokenizer.from_pretrained(model_path)
-# config = AutoConfig.from_pretrained(model_path)
-# model = AutoModelForSequenceClassification.from_pretrained(model_path)
-
 
 
 def check_csv(csv_file, data):

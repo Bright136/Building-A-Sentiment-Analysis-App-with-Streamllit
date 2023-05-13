@@ -11,16 +11,14 @@ import time
 dstbt_model_path = "bright1/fine-tuned-distilbert-base-uncased" # distilbert model
 rbta_model_path = "bright1/fine-tuned-twitter-Roberta-base-sentiment" # roberta model
 
+# function to load model 
 def load_model_components(model_path):
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     config = AutoConfig.from_pretrained(model_path)
     model = AutoModelForSequenceClassification.from_pretrained(model_path)
     return model, tokenizer, config
 
-# dark_theme = set_theme()
-
-image = Image.open('app/senti1.jpg')
-
+# configure page
 st.set_page_config(
     page_title="Tweet Analyzer",
     page_icon="🤖",
@@ -33,17 +31,17 @@ st.set_page_config(
 # Define custom CSS style
 
 # Apply custom CSS
-st.markdown("""<style> 
-        [data-testid="stAppViewContainer"] {
-            background-image: url("app\download.png");
-             background-attachment: fixed;
-            background-size: cover
-            }
-</style>""", unsafe_allow_html=True)
+# st.markdown("""<style> 
+#         [data-testid="stAppViewContainer"] {
+#             background-image: url("app\download.png");
+#              background-attachment: fixed;
+#             background-size: cover
+#             }
+# </style>""", unsafe_allow_html=True)
+
 
 
 # create a sidebar and contents
-
 st.sidebar.markdown("""
 ## Demo App
 
@@ -59,6 +57,7 @@ st.markdown("""<style>
             }
 </style>""", unsafe_allow_html=True)
 
+# set a default model path
 model_path = dstbt_model_path
 if model_type == 'roberta':
     model_path = rbta_model_path
@@ -86,7 +85,7 @@ with my_expander:
     model, tokenizer, config = load_model_components(model_path)
 
 
-
+    # size columns
     col1, col2, col3 = st.columns((1.6, 1,0.3))
     # col2.markdown("""
     #         <p style= font-color:red>
@@ -103,6 +102,7 @@ with my_expander:
     
     # set textarea to receive tweet
     tweet = col1.text_area('Tweets to analyze',height=200, max_chars=520, placeholder='Write your Tweets here')
+
     # divide container into columns
     colA, colb, colc, cold = st.columns(4)
     clear_button = colA.button(label='Clear', type='secondary', use_container_width=True)
@@ -141,26 +141,28 @@ with my_expander:
             [data-testid="stMetricValue"] {
                 font-size: 20px;
             }
-            .st-cx {
+            .st-ed {
                 background-color: #FF4B4B;  
             
             }
-            .st-cy  {
+            .st-ee {
                 background-color: #1B9C85;
             }
-            .st-cv {
+            .st-eb {
                 background-color: #FFD95A;
             }
             </style>
             """,
                 unsafe_allow_html=True,
             )
+
+            # class=""
             # dispay the scores with metric widget 
             neutral_score = st.metric(label='Score', value=round(results['Neutral'], 4), label_visibility='collapsed')
             negative_score = st.metric(label='Score', value=round(results['Negative'], 4), label_visibility='collapsed')
             positive_score = st.metric(label='Score', value=round(results['Positive'], 4), label_visibility='collapsed')
             
-            interpret_button = col2.button(label='Interpret',type='secondary', use_container_width=True)
+            # interpret_button = col2.button(label='Interpret',type='secondary', use_container_width=True)
 
 
 
