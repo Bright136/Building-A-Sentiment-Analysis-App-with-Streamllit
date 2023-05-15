@@ -59,5 +59,6 @@ Open your browser and go to http://localhost:8501/
     <img src="https://drive.google.com/uc?export=view&id=1EAyNzwMOaJPJrDUFHkz6tyqfLJokkWoS"/>
 
 </div>
+
 ## Author
 Bright Eshun
