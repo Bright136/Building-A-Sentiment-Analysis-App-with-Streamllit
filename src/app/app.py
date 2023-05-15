@@ -130,7 +130,8 @@ with my_expander:
         
         # create am expander to contain the results
         with empty_container:
-            neutral = st.progress(value=results['Neutral'], text='Neutral',)
+            global neutral, negative, positive, neutral_score, positive_score, negative_score
+            neutral = st.progress(value=results['Neutral'], text='Neutral')
             negative = st.progress(value=results['Negative'], text='Negative')
             positive = st.progress(value=results['Positive'], text='Positive')
 
@@ -163,6 +164,8 @@ with my_expander:
             positive_score = st.metric(label='Score', value=round(results['Positive'], 4), label_visibility='collapsed')
             
             # interpret_button = col2.button(label='Interpret',type='secondary', use_container_width=True)
+    if clear_button:
+        tweet = ""
 
 
 
