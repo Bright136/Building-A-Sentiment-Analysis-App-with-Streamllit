@@ -78,7 +78,7 @@ with my_expander:
         """, unsafe_allow_html=True)
     
     #set title for the app
-    st.title(':green[Covid-19 Vaccines Tweets Analyzer]')
+    st.title(':green[Covid-19 Vaccine Tweets Analyzer]')
 
 
     # load model components
