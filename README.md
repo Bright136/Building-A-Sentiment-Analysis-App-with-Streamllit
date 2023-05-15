@@ -51,6 +51,13 @@ run the command:
 
 Open your browser and go to http://localhost:8501/
 
+## Screenshots
 
+<span>Photos of the Gradio App</span>
+
+<div align='center'> 
+    <img src="https://drive.google.com/uc?export=view&id=1EAyNzwMOaJPJrDUFHkz6tyqfLJokkWoS"/>
+
+</div>
 ## Author
 Bright Eshun
