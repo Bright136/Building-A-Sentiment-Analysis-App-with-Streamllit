@@ -1,4 +1,9 @@
 # Building A Sentiment Analysis App with Streamlit
+
+<div align='center'> 
+    <img src="https://drive.google.com/uc?export=view&id=1EAyNzwMOaJPJrDUFHkz6tyqfLJokkWoS"/>
+
+</div>
 This is a streamlit app that performs sentiment analysis on COVID-19 tweets using two pre-trained language models, DistilBERT and RoBERTa.
 
 ## Summary
@@ -61,4 +66,20 @@ Open your browser and go to http://localhost:8501/
 </div>
 
 ## Author
-Bright Eshun
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Twitter</th>
+    <th>LinkedIn</th>
+    <th>GitHub</th>
+    <th>Hugging Face</th>
+  </tr>
+  <tr>
+    <td>Bright Eshun</td>
+    <td><a href="https://twitter.com/bright_eshun_">@bright_eshun_</a></td>
+    <td><a href="https://www.linkedin.com/in/bright-eshun-9a8a51100/">@brighteshun</a></td>
+    <td><a href="https://github.com/Bright136">@bright136</a></td>
+    <td><a href="https://huggingface.co/bright1">@bright1</a></td>
+  </tr>
+</table>
