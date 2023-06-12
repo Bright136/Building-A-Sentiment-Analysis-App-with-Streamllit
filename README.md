@@ -44,7 +44,7 @@ Do:
 
 - Linux & MacOs:
 
-        python3 -m venv ve  nv; source venv/bin/activate; python -m pip install -q --upgrade pip; python -m pip install -qr requirements.txt
+        python3 -m venv venv; source venv/bin/activate; python -m pip install -q --upgrade pip; python -m pip install -qr requirements.txt
 
 
 ## App Execution
@@ -53,13 +53,13 @@ After all requirement have been install
 
 At the root of your repository in your terminal
 run the command: 
-            gradio .\scr\app\app.py
+            streamlit run .\scr\app\app.py
 
 Open your browser and go to http://localhost:8501/
 
 ## Screenshots
 
-<span>Photos of the Gradio App</span>
+<span>Photos of the Streamlit App</span>
 
 <div align='center'> 
     <img src="https://drive.google.com/uc?export=view&id=1EAyNzwMOaJPJrDUFHkz6tyqfLJokkWoS"/>
